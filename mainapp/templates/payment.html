@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            animation: animate 30s ease-in-out infinite;
+            background-size:cover;
+        }
+        .outer{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .details{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: seashell;
+        }
+        .container .outer .details div:after{
+            content: "lorerm odqwdjq";
+            color: rgb(173, 171, 163);
+            font-size: 2em;
+            animation: animate-text 30s ease-in-out infinite;
+        }
+        .container .outer .details .text:after{
+            content: "lorerm odqwdjq";
+            color: white;
+            animation: animate-text1 30s ease-in-out infinite;
+        }
+        @keyframes animate-text{
+            0%,100%{
+                content: "“No one has ever become poor by giving.”";
+                color: rgb(102, 99, 99);
+                font-weight: 100;
+            }
+            5%{
+                content: "“No one has ever become poor by giving.”"; 
+                color: rgb(219, 215, 215);
+                font-weight: 100;
+            }
+            10%{
+                content: "“No one has ever become poor by giving.”"; 
+                color: white;
+                font-weight: 100;
+            }
+            15%{
+                content: "“No one has ever become poor by giving.”"; 
+                color: rgb(219, 215, 215);
+                font-weight: 100;
+            }
+            20%{
+                content: "“No one has ever become poor by giving.”"; 
+                color: rgb(124, 121, 121);
+                font-weight: 100;
+            }
+            25%{
+                content: "“No one has ever become poor by giving.”"; 
+                color: rgb(41, 40, 40);
+                font-weight: 100;
+            }
+            30%{
+                content: "“Charity isn't about pity, it is about love.” “Not all of us can do great things. But we can do small things with great love.” “The fruit of love is service, which is compassion in action”.";
+                color: rgb(102, 99, 99);
+                font-weight: 100;
+            }
+            35%{
+                content: "“Charity isn't about pity, it is about love.” “Not all of us can do great things. But we can do small things with great love.” “The fruit of love is service, which is compassion in action”.";
+                color: rgb(219, 215, 215);
+                font-weight: 100;
+            }
+            40%{
+                content: "“Charity isn't about pity, it is about love.” “Not all of us can do great things. But we can do small things with great love.” “The fruit of love is service, which is compassion in action”.";
+                color: white;
+                font-weight: 100;
+            }
+            45%{
+                content: "“Charity isn't about pity, it is about love.” “Not all of us can do great things. But we can do small things with great love.” “The fruit of love is service, which is compassion in action”.";
+                color: rgb(124, 121, 121);
+                font-weight: 100;
+            }
+            50%{
+                content: "“Charity isn't about pity, it is about love.” “Not all of us can do great things. But we can do small things with great love.” “The fruit of love is service, which is compassion in action”.";
+                color: rgb(41, 40, 40);
+                font-weight: 100;
+            }
+            55%{
+                content: "“One child, one teacher, one book, one pen can change the world.”";
+                color: rgb(102, 99, 99);
+                font-weight: 100;
+            }
+            60%{
+                content: "“One child, one teacher, one book, one pen can change the world.”";
+        
+                color: rgb(219, 215, 215);
+                font-weight: 100;
+            }
+            65%{
+                content: "“One child, one teacher, one book, one pen can change the world.”";
+        
+                color: rgb(219, 215, 215);
+                font-weight: 100;
+            }
+            70%{
+                content: "“One child, one teacher, one book, one pen can change the world.”";
+        
+                color: rgb(124, 121, 121);
+                font-weight: 100;
+            }
+            75%{
+                content: "“One child, one teacher, one book, one pen can change the world.”";
+        
+                color: rgb(41, 40, 40);
+                font-weight: 100;
+            }
+            80%{
+                content: "“Service To Others Is The Rent You Pay For Your Room Here On Earth.”";
+        
+                color: rgb(41, 40, 40);
+                font-weight: 100;
+            }
+            85%{
+                content: "“Service To Others Is The Rent You Pay For Your Room Here On Earth.”";
+        
+                color: rgb(102, 99, 99);
+                font-weight: 100;
+            }
+            90%{
+                content: "“Service To Others Is The Rent You Pay For Your Room Here On Earth.”";
+        
+                color: rgb(235, 235, 235);
+                font-weight: 100;
+            }
+            95%{
+                content: "“Service To Others Is The Rent You Pay For Your Room Here On Earth.”";
+        
+                color: rgb(88, 86, 86);
+                font-weight: 100;
+            }
+           
+
+        }
+        @keyframes animate-text1{
+            0%,100%{
+                content: "~ Anne Frank";
+                color: rgb(102, 99, 99);
+                font-weight: 100;
+            }
+            5%{
+                content: "~ Anne Frank"; 
+                color: rgb(219, 215, 215);
+                font-weight: 100;
+            }
+            10%{
+                content: "~ Anne Frank"; 
+                color: white;
+                font-weight: 100;
+            }
+            15%{
+                content: "~ Anne Frank"; 
+                color: rgb(219, 215, 215);
+                font-weight: 100;
+            }
+            20%{
+                content: "~ Anne Frank"; 
+                color: rgb(124, 121, 121);
+                font-weight: 100;
+            }
+            25%{
+                content: "~ Anne Frank"; 
+                color: rgb(41, 40, 40);
+                font-weight: 100;
+            }
+            30%{
+                content: "~ Mother Teresa";
+                color: rgb(102, 99, 99);
+                font-weight: 100;
+            }
+            35%{
+                content: "~ Mother Teresa";
+                color: rgb(219, 215, 215);
+                font-weight: 100;
+            }
+            40%{
+                content: "~ Mother Teresa";
+                color: white;
+                font-weight: 100;
+            }
+            45%{
+                content: "~ Mother Teresa";
+                color: rgb(124, 121, 121);
+                font-weight: 100;
+            }
+            50%{
+                content: "~ Mother Teresa";
+                color: rgb(41, 40, 40);
+                font-weight: 100;
+            }
+            55%{
+                content: "~ Malala Yousafzai";
+                color: rgb(102, 99, 99);
+                font-weight: 100;
+            }
+            60%{
+                content: "~ Malala Yousafzai";
+        
+                color: rgb(219, 215, 215);
+                font-weight: 100;
+            }
+            65%{
+                content: "~ Malala Yousafzai";
+        
+                color: rgb(219, 215, 215);
+                font-weight: 100;
+            }
+            70%{
+                content: "~ Malala Yousafzai";
+        
+                color: rgb(124, 121, 121);
+                font-weight: 100;
+            }
+            75%{
+                content: "~ Malala Yousafzai";
+        
+                color: rgb(41, 40, 40);
+                font-weight: 100;
+            }
+            80%{
+                content: "~ Muhammad Ali";
+        
+                color: rgb(41, 40, 40);
+                font-weight: 100;
+            }
+            85%{
+                content: "~ Muhammad Ali";
+        
+                color: rgb(102, 99, 99);
+                font-weight: 100;
+            }
+            90%{
+                content: "~ Muhammad Ali";
+        
+                color: rgb(235, 235, 235);
+                font-weight: 100;
+            }
+            95%{
+                content: "~ Muhammad Ali";
+        
+                color: rgb(88, 86, 86);
+                font-weight: 100;
+            }
+            
+        }
+        
+        
+        @keyframes animate{
+            0%,100%{
+                background-image: url('https://static.dw.com/image/15774629_401.jpg');
+                color: skyblue;
+            }
+            5%{
+                background-image: url('https://static.dw.com/image/15774629_401.jpg');
+                color: skyblue;
+            }
+            10%{
+                background-image: url('https://static.dw.com/image/15774629_401.jpg');
+                color: skyblue;
+            }
+            15%{
+                background-image: url('https://static.dw.com/image/15774629_401.jpg');
+                color: skyblue;
+            }
+            20%{
+                background-image: url('https://static.dw.com/image/15774629_401.jpg');
+                color: skyblue;
+            }
+            25%{
+                background-image: url('https://static.dw.com/image/15774629_401.jpg');
+                color: skyblue;
+            }
+            30%{
+                background-image: url('https://ichef.bbci.co.uk/images/ic/1920x1080/p04vbpr5.jpg');
+                color: slateblue;
+            }
+            35%{
+                background-image: url('https://ichef.bbci.co.uk/images/ic/1920x1080/p04vbpr5.jpg');
+                color: slateblue;
+            }
+            40%{
+                background-image: url('https://ichef.bbci.co.uk/images/ic/1920x1080/p04vbpr5.jpg');
+                color: slateblue;
+            }
+            45%{
+                background-image: url('https://ichef.bbci.co.uk/images/ic/1920x1080/p04vbpr5.jpg');
+                color: slateblue;
+            }
+            50%{
+                background-image: url('https://ichef.bbci.co.uk/images/ic/1920x1080/p04vbpr5.jpg');
+                color: slateblue;
+            }
+            55%{
+                background-image: url('https://media.newyorker.com/photos/5c36232013070229940300f0/16:9/w_2560,h_1440,c_limit/Chotiner-MalalaInterview.jpg');
+                color: tomato;
+            }
+            60%{
+                background-image: url('https://media.newyorker.com/photos/5c36232013070229940300f0/16:9/w_2560,h_1440,c_limit/Chotiner-MalalaInterview.jpg');
+                color: tomato;
+            }
+            65%{
+                background-image: url('https://media.newyorker.com/photos/5c36232013070229940300f0/16:9/w_2560,h_1440,c_limit/Chotiner-MalalaInterview.jpg');
+                color: tomato;
+            }
+            70%{
+                background-image: url('https://media.newyorker.com/photos/5c36232013070229940300f0/16:9/w_2560,h_1440,c_limit/Chotiner-MalalaInterview.jpg');
+                color: tomato;
+            }
+            75%{
+                background-image: url('https://media.newyorker.com/photos/5c36232013070229940300f0/16:9/w_2560,h_1440,c_limit/Chotiner-MalalaInterview.jpg');
+                color: tomato;
+            }
+            80%{
+                background-image: url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/04/02/15/Ali.jpg?width=640&height=614&fit=bounds&format=pjpg&crop=16%3A9%2Coffset-y0.5&auto=webp&quality=75');
+                color: yellow;
+            }
+            85%{
+                background-image: url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/04/02/15/Ali.jpg?width=640&height=614&fit=bounds&format=pjpg&crop=16%3A9%2Coffset-y0.5&auto=webp&quality=75');
+                color: yellow;
+            }
+            90%{
+                background-image: url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/04/02/15/Ali.jpg?width=640&height=614&fit=bounds&format=pjpg&crop=16%3A9%2Coffset-y0.5&auto=webp&quality=75');
+                color: yellow;
+            }
+            95%{
+                background-image: url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/04/02/15/Ali.jpg?width=640&height=614&fit=bounds&format=pjpg&crop=16%3A9%2Coffset-y0.5&auto=webp&quality=75');
+                color: yellow;
+            }
+            
+        }
+        .form{
+            left: 50%;
+            align-items: baseline;
+        }
+        .razorpay-payment-button{
+            background-color: rgb(207, 129, 27);
+            border: 2px solid;
+           border-radius: 10px;
+           width: 200px;
+           height: 50px;
+           animation: animate-button 2s ease-in-out infinite;
+
+        }
+        @keyframes animate-button{
+            0%,100%{
+                background-color: rgb(253, 146, 6);
+                
+            }
+            25%{
+                background-color: rgb(197, 179, 156);
+               
+            }
+            50%{
+                background-color: rgb(197, 163, 118);
+                
+            }
+            75%{
+                background-color: rgb(126, 78, 15);
+                
+            }
+        }
+        .razorpay-payment-button:hover{
+           cursor: pointer;
+           border: 2px solid;
+           border-radius: 10px;
+           background-color: rgb(255, 145, 0);
+
+        }
+        .header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000000;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .header .logo{
+            color: rgb(187, 112, 27);
+            text-decoration: none;
+            font-size: 1.2em;
+            top: 10px;
+            padding-left: 30px;
+
+        }
+        .header .toggle span{
+            padding-top: 30px; 
+            display: flex;
+            
+        }
+        .header .toggle span li{
+           
+            list-style: none;
+            padding-right: 40px;
+        }
+        .header .toggle span li a{
+        text-decoration: none;
+        color: rgb(187, 112, 27);}
+        .header .toggle span li a:hover{
+            color: rgb(255, 166, 0);
+            text-decoration: none;
+            padding-left: 40px;
+            font-size: 22px;
+            cursor: pointer;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="header">
+        <h1 class="logo">
+            <form action="/success" method="POST" id="formid">
+                {% csrf_token %}
+
+        <script
+            src="https://checkout.razorpay.com/v1/checkout.js"
+            data-key="rzp_test_iXfpXlITWNKm0U" // Enter the Test API Key ID generated from Dashboard → Settings → API Keys
+            data-amount="{{payment.amount}}" // Amount is in currency subunits. Hence, 29935 refers to 29935 paise or ₹299.35.
+            data-currency="INR"//You can accept international payments by changing the currency code. Contact our Support Team to enable International for your account
+            data-order_id="{{payment.id}}"//Replace with the order_id generated by you in the backend.
+            data-buttontext="Pay with Razorpay"
+            data-name="The Sparks Foundation"
+            data-description="Donate for a Cause"
+            data-image="https://www.thesparksfoundationsingapore.org/images/logo_small.png"
+            data-prefill.name="{{name}}"
+            data-prefill.email="{{email}}"
+            data-theme.color="#DAA520"
+        ></script>
+        <input type="hidden" custom="Hidden Element" name="hidden">
+        </form>
+        </h1>
+    
+        <div class="toggle">
+        <span>
+            <li><a href="/">Home</a></li>
+            <li><a href="../#aboutid">About us</a></li>
+            <li><a href="../#formdata">Contact us</a></li>
+        </span>
+    
+        </div>
+    </section>
+    <div class="container">
+        <div class="outer">
+            <div class="details">
+                <div></div><br><br>
+                <div class="text"></div>
+                
+            </div>
+            
+        </div>
+       
+    </div>
+   
+</body>
+
+</html>

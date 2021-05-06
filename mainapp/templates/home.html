@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>TSF_Donate_foracause</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            scroll-behavior: smooth;
+        }
+        body{
+            background: #111;
+        }
+        section{
+            position: relative;
+            padding: 100px;
+        }
+        .header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000000;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .header .logo{
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .header .toggle img{
+            max-width:40px;
+            cursor: pointer;
+        }
+        .banner{
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner:before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 400px;
+            z-index: 1;
+            background: linear-gradient(to top,#111,transparent);
+        }
+        .banner .content{
+            position: relative;
+            max-width: 900px;
+            text-align: center;
+            z-index: 1;
+        }
+        .banner .content h2{
+            color: rgb(167, 110, 24);
+            font-size: 3.8em;
+        }
+        .banner .content p{
+            color: #fff;
+            font-size: 1.2em;
+        }
+        .fitBg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.2;
+        }
+        .btn{
+            position: relative;
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 30px;
+            background:  rgb(167, 110, 24);
+            color: rgb(250, 250, 250);
+            text-decoration: none;
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: rgb(105, 88, 63);
+            color: rgba(0, 0, 0, 0.5);
+            box-shadow: rgba(255, 255, 255, 0.5);
+        }
+        .about{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .about .contentBx{
+            min-width: 50%;
+            width: 50%;
+            text-align: end;
+            padding-right: 40px;
+        }
+        .titleText{
+            font-weight: 600;
+            color: rgb(167, 110, 24);
+            font-size: 2.4em;
+            margin-bottom: 10px;
+
+        }
+        .text{
+            color: #fff;
+            font-size: 1em;
+
+        }
+        .about .imgBx{
+            position: relative;
+            min-width: 50%;
+            width: 50%;
+            min-height: 500px;
+        }
+        .fit1Bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+        .banner2{
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .banner2:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 400px;
+            z-index: 1;
+            background: linear-gradient(to bottom,#111,transparent);
+        }
+        .footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .footer .sci{
+            position: relative;
+            display: flex;
+        }
+        .footer .sci li{
+            list-style: none;
+        }
+        .footer .sci li a{
+            text-decoration: none;
+            
+        }
+        .footer .sci li a i{
+            filter: invert(1);
+            max-width: 100px;
+            padding: 20px;
+            color: burlywood;
+
+        }
+        .copyrighttext{
+            margin-top: 20px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+        }
+        .copyrighttext a{
+            color: #fff;
+            text-decoration: none;
+        }
+  
+        
+        .loginbox{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 350px;
+            height: 420px;
+            padding: 80px 40px;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        h2{
+            margin: 0;
+            padding: 0 0 20px;
+            color: rgb(167, 110, 24);
+            text-align: center;
+            font-size: 2em;
+        }
+        .loginbox p{
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            color: #fff;
+
+        }
+        .loginbox input{
+            width: 100%;
+            margin-bottom: 20px;
+            
+        }
+        .loginbox input[type="text"] ,.loginbox input[type="email"]{
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 16px;
+        }
+        .loginbox input[type="submit"]{
+            border: none;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 16px;
+            background: rgb(138, 80, 4);
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        .loginbox input[type="submit"]:hover{
+            background: rgb(179, 173, 16);
+            color: rgb(0, 0, 0);
+        }
+       
+        .form_contact p{
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            color: #fff;
+
+        }
+        .form_contact input{
+            width: 100%;
+            margin-bottom: 20px;
+            
+        }
+        .form_contact input[type="text"] ,.form_contact input[type="email"],.form_contact textarea{
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 16px;
+        }
+        .form_contact input[type="submit"]{
+            border: none;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 16px;
+            background: rgb(138, 80, 4);
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        .form_contact input[type="submit"]:hover{
+            background: rgb(179, 173, 16);
+            color: rgb(0, 0, 0);
+        }
+        .header .toggle span{
+            display: flex;
+            
+            list-style: none;
+        }
+        .header .toggle span li a{
+            color: rgb(185, 123, 8);
+            text-decoration: none;
+            padding-left: 15px;
+            font-size: 1.2em;
+        }
+        .header .toggle span li a:hover{
+            color: rgb(255, 166, 0);
+            text-decoration: none;
+            padding-left: 40px;
+            font-size: 22px;
+            cursor: pointer;
+            
+        }
+        .fa-facebook-square:before {
+    color:rgb(85, 75, 62);
+    font-size: 40px;
+         }
+         .fa-instagram:before{
+            color: rgb(85, 75, 62); 
+            font-size: 40px;
+         }
+         .fa-linkedin-in:before{
+            color: rgb(85, 75, 62);
+            font-size: 40px;  
+         }
+         .fa-facebook-square:hover{
+             font-size:43px;
+             
+         }
+         .fa-instagram:hover{
+             font-size:43px;
+             
+         }
+         .fa-linkedin-in:hover{
+             font-size:43px;
+             
+         }
+         @media(max-width:640px){
+            .banner2:after{
+                width: 0%;
+            }
+            .loginbox{
+                top: 42%;
+            }
+            .banner .content h2 {
+            color: #fff;
+            font-size: 15px;
+}
+            .banner .content .para {
+            color: #fff;
+            font-size: 15px;
+}
+        .banner .content .donateheading{
+            font-size: 26px;
+            color: rgb(185, 123, 8);
+        }
+        .text{
+            font-size: 15px;
+        }
+        .titleText{
+            margin-top: 20px;
+        }
+        }
+        @media(max-width:767px) {
+            section{
+                padding: 40px;
+
+            }
+            .banner .content h2{
+                color: #fff;
+                
+            }
+            .banner .content p{
+                font-size: 2.5em;
+            }
+            .about{
+                flex-direction: column-reverse;
+            }
+            .about .contentBx, .about .imgBx{
+                min-width: 100%;
+                width: 100%;
+                text-align: center;
+                padding-right: 0px;
+
+            }
+            .about .imgBx{
+                min-height: 250px;
+            }
+            .btn{
+                margin-bottom: 30px;}
+  
+            .loginbox {
+                    position: absolute;
+                    top: 36%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 75%;
+                    height: 420px;
+                    padding: 67px 40px;
+                    box-sizing: border-box;
+                    background: rgba(0, 0, 0, 0.5);
+                }
+                .banner .content p {
+            font-size: 1.1em;
+                }
+            
+            }
+            @media(max-width:375px){
+                .header .toggle span li a {
+    color: rgb(185, 123, 8);
+    text-decoration: none;
+    padding-left: 10px;
+    font-size: 1.0em}
+}
+            
+            @media(max-width:763px){
+                .banner .content p {
+            font-size: 1.5em;
+                }
+            }
+            @media(min-width:773px){
+                .banner .content h2 {
+                     font-size: 2.8em;
+                }
+            }
+           @media(max-width: 360px){
+            .header .toggle span li a {
+    color: rgb(185, 123, 8);
+    text-decoration: none;
+    padding-left: 10px;
+    font-size: 10px;
+}
+.titleText {
+    font-weight: 600;
+    color: rgb(167, 110, 24);
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+           }
+        @media(max-width: 320px){
+            .titleText {
+    font-weight: 600;
+    color: rgb(167, 110, 24);
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+h2 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: rgb(167, 110, 24);
+    text-align: center;
+    font-size: 1.2em;
+}
+.banner .content .donateheading {
+    font-size: 21px;
+    color: rgb(185, 123, 8);
+}
+        }
+    @media(max-width: 411px){
+            .titleText {
+    font-weight: 600;
+    color: rgb(167, 110, 24);
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+        }
+        
+.dynamic-text li{
+    list-style: none;
+
+}
+.dynamic-text li span::after{
+    
+            content: "lorerm odqwdjq";
+            font-size: 40px;
+            font-weight: bold;
+            font-family:Arial, Helvetica, sans-serif;
+            text-shadow: black 2px;
+            color: rgb(167, 110, 24);
+            animation: animate-text1 12s ease-in-out infinite;
+}
+@keyframes animate-text1{
+            0%,100%{
+                content: "Make a donation , make a difference";
+           
+            }
+            5%{
+                content: "Make a donation , make a difference";
+        
+            }
+            10%{
+                content: "Make a donation , make a difference";
+        
+            }
+            15%{
+                content: "Make a donation , make a difference";
+        
+            }
+            20%{
+                content: "Make a donation , make a difference";
+    
+            }
+            25%{
+                content: "Be the change you want to see in this world";
+        
+            }
+            30%{
+                content: "Be the change you want to see in this world";
+                
+        
+            }
+            35%{
+                content: "Be the change you want to see in this world";
+    
+            }
+            40%{
+                content: "Be the change you want to see in this world";
+            
+            }
+            45%{
+                content: "Be the change you want to see in this world";
+    
+            }
+            50%{
+                content:"Great things are done by series of small things";
+            
+            }
+            55%{
+                content: "Great things are done by series of small things";
+        
+            }
+            60%{
+                content: "Great things are done by series of small things";
+        
+            }
+            65%{
+                content: "Great things are done by series of small things";
+    
+            }
+            70%{
+                content: "Great things are done by series of small things";
+            
+            }
+            75%{
+                content: "Giving is the greatest act of grace";
+    
+            }
+            80%{
+                content: "Giving is the greatest act of grace";
+            
+            }
+            85%{
+                content: "Giving is the greatest act of grace";
+        
+            }
+            90%{
+                content: "Giving is the greatest act of grace";
+            
+            }
+            95%{
+                content: "Giving is the greatest act of grace";
+    
+            }
+}
+
+
+
+    </style>
+</head>
+<body>
+<section class="header">
+    <a href="/" class="logo"><h2>TSF</h2></a>
+
+    <div class="toggle">
+    <span>
+        <li><a href="#aboutid">About us</a></li>
+        <li><a href="#formdata">Contact us</a></li>
+    </span>
+
+    </div>
+</section>
+<section class="banner">
+    <img src="{{obj2.image.url}}" alt="bgimage" class="fitBg">
+    <div class="content">
+        <h2 class="donateheading"><ul class="dynamic-text">
+            <li><span></span></li>
+        </ul></h2><br><br>
+        <p class="para">Help poor children fight their way out of poverty. When it is hard
+            to afford necessities like food, shelter, and clothing; education becomes a luxury
+            that the poor give up. Illiteracy then leads to further poverty. Donate for child education
+            , support them with fees, school supplies, footwear, transport and opportunities to showcase
+            their talents..</p>
+
+        <a href="#donatebox" class="btn">Donate</a>
+    </div>
+</section>
+<section id="aboutid" class="about">
+    <div class="contentBx">
+        <h2 class="titleText">About Us</h2>
+        <p class="text"> The Sparks Foundation is a 501c3 operating foundation (TIN/EIN 26-3473272) founded in 2008
+            by Liz and Dave Sparks of Houston, TX. The Foundation works in the field of education in Santiago Atitlán,
+            a village in the highlands of Guatemala with an indigenous Mayan population. On a visit to Santiago, the
+            Sparks encountered a community school in dire straits.  This school was part of an educational system that
+            provided little to no opportunities for its students, resulting in an inability to speak Spanish, widespread
+            illiteracy,  and a lifetime consigned to manual labor and poverty.  The existing facilities at this time
+            were makeshift and unsanitary.  The supplies were few and poorly stored.  The children suffered from a
+            variety of health issues, from malnutrition to parasites to more serious undiagnosed conditions.
+            The foundation began as an attempt to address some of these problems.</p>
+        <a href="https://thesparksfoundation.org" target="_blank" class="btn">read more</a>
+    </div>
+    <div class="imgBx">
+        <img src="{{obj3.image.url}}" class="fit1Bg" alt="">
+    </div>
+</section>
+<section class="banner2"  id="donatebox">
+    <img src="{{obj4.image.url}}" alt="" class="fitBg">
+
+    <div class="loginbox">
+
+        <h2>Donate</h2>
+        <form method="POST" action="/payment">
+            {% csrf_token %}
+            <p>Name</p>
+            <input type="text" name="name" placeholder="enter your name" required>
+            <p>Email</p>
+            <input type="email" name="email" placeholder="enter your email" required>
+            <p>Amount</p>
+            <input type="text" name="amount" placeholder="amount" required>
+            <input type="submit" value="Donate">
+
+        </form>
+    </div>
+</section>
+
+<section class="footer">
+    <h2>Contact us </h2>
+    <div class="form_contact">
+        <form method="POST" action="/contactus" id="formdata">
+            {% csrf_token %}
+            <p>Name</p>
+            <input type="text" name="contactname" placeholder="enter your name" required>
+            <p>Email</p>
+            <input type="email" name="contactemail" placeholder="enter your email" required><br>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="write your message here ..."
+                      required></textarea>
+            <input type="submit" value="send">
+
+        </form>
+    </div>
+    <ul class="sci">
+        <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+    </ul>
+    <br><br>
+    <hr style="color: rgb(250, 250, 250); width: 100%;">
+    <h4 class="copyrighttext">Copyright &copy;2021 <a style="color: rgb(187, 115, 21);" href="http://www.thesparksfoundation.org">TheSparksFoundation</a>
+    </h4>
+</section>
+</body>
+<script>
+    var form=document.getElementById('formdata')
+    form.addEventListener('submit',function(event){
+        alert('Your message has been sent.')
+    })
+
+</script>
+
+</html>
